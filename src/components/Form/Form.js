@@ -11,8 +11,12 @@ class Form extends Component {
 
   render() {
     return (
-      <form>
-        
+      <form className='search-bar'>
+        <input 
+          type='text'
+          placeholder='search for a word'
+          value={this.state.searchBarValue}
+        />
       </form>
     )
   }
