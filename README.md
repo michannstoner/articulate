@@ -1,1 +1,1 @@
-# articulate
+# ARTICULATE.
