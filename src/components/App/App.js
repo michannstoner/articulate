@@ -1,9 +1,22 @@
-import './App.css';
+import './App.css'
+import Nav from '../Nav/Nav'
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <h1>Hello</h1>
-  );
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+
+    }
+  }
+
+  render() {
+    return (
+      <main className='main'>
+        <Nav />
+      </main>
+    )
+  }
 }
 
 export default App;
