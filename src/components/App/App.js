@@ -1,4 +1,5 @@
 import './App.css'
+import Form from '../Form/Form'
 import Nav from '../Nav/Nav'
 import React, { Component } from 'react'
 
@@ -14,6 +15,7 @@ class App extends Component {
     return (
       <main className='main'>
         <Nav />
+        <Form />
       </main>
     )
   }
