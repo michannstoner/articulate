@@ -1,4 +1,5 @@
 import './App.css'
+import Nav from '../Nav/Nav'
 import React, { Component } from 'react'
 
 class App extends Component {
@@ -11,7 +12,9 @@ class App extends Component {
 
   render() {
     return (
-      <h1>Hello</h1>
+      <main className='main'>
+        <Nav />
+      </main>
     )
   }
 }
