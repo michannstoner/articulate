@@ -25,7 +25,19 @@ class App extends Component {
     .then(data => this.setState({ wordToDisplay: data }))
   }
 
+  addToFavorites = event => {
+    event.preventDefault()
+    const favorites = this.state.favorites
+    const wordToAdd = this.state.wordToDisplay.word
+
+    if (!favorites.includes(wordToAdd)) {
+      this.setState({favorites: [...favorites, wordToAdd]})
+    }
+
+  }
+
   render() {
+    console.log(this.state.favorites);
     return (
       <main className='main'>
         <Nav />
@@ -34,7 +46,11 @@ class App extends Component {
           <h2>welcome to ARTICULATE.</h2>
           <p>search for a word to learn more</p>
         </section>}
-        {this.state.wordToDisplay && <WordInfo wordToDisplay={this.state.wordToDisplay}/>}
+        {this.state.wordToDisplay && 
+          <WordInfo 
+            wordToDisplay={this.state.wordToDisplay}
+            addToFavorites={this.addToFavorites}
+        />}
       </main>
     )
   }
