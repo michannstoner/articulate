@@ -33,7 +33,7 @@ class Form extends Component {
           value={this.state.searchBarValue}
           onChange={event => this.handleChange(event)}
         />
-        <button onClick={event => this.inputSearch(event)}>search</button>
+        <button className='search-button' disabled={!this.state.searchBarValue} onClick={event => this.inputSearch(event)}>search</button>
       </form>
     )
   }
