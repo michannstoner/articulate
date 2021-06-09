@@ -6,8 +6,8 @@ const WordInfo = ({ wordToDisplay, addToFavorites }) => {
     <Word
       key={wordToDisplay.frequency}
       word={wordToDisplay.word}
-      definition={wordToDisplay.results[0].definition}
-      pronunciation={wordToDisplay.pronunciation.all}
+      definition={wordToDisplay.definition}
+      pronunciation={wordToDisplay.pronunciation}
     />
   
   return (

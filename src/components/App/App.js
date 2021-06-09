@@ -1,9 +1,11 @@
 import './App.css'
 import Favorites from '../Favorites/Favorites'
+import { fetchWord } from '../../utils/api-calls'
+import { filterWordData } from '../../utils/cleaning-functions'
 import Form from '../Form/Form'
 import Nav from '../Nav/Nav'
 import React, { Component } from 'react'
-import { Route, Link } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import WordInfo from '../WordInfo/WordInfo'
 
 class App extends Component {
@@ -11,20 +13,18 @@ class App extends Component {
     super()
     this.state = {
       wordToDisplay: '',
-      favorites: []
+      favorites: [],
+      error: ''
     }
   }
 
   submitSearch = word => {
-    fetch(`https://wordsapiv1.p.rapidapi.com/words/${word}`, {
-	      "method": "GET",
-	      "headers": {
-		      "x-rapidapi-key": "247406a57bmsh73bf0cce7ec0b4cp15cc72jsnf9d8d4aae1f1",
-		      "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
-	      }
-    })
-    .then(response => response.json())
-    .then(data => this.setState({ wordToDisplay: data }))
+    fetchWord(word)
+    .then(data => {
+      const wordData = filterWordData(data);
+      this.setState({ wordToDisplay: wordData })
+  })
+    .catch(error => this.setState({ error: 'Something went wrong, please try again later.'}))
   }
 
   addToFavorites = event => {
@@ -35,7 +35,6 @@ class App extends Component {
     if (!favorites.includes(wordToAdd)) {
       this.setState({favorites: [...favorites, wordToAdd]})
     }
-
   }
 
   render() {
