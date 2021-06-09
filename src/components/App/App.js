@@ -30,7 +30,7 @@ class App extends Component {
   addToFavorites = event => {
     event.preventDefault()
     const favorites = this.state.favorites
-    const wordToAdd = this.state.wordToDisplay.word
+    const wordToAdd = this.state.wordToDisplay
 
     if (!favorites.includes(wordToAdd)) {
       this.setState({favorites: [...favorites, wordToAdd]})
@@ -39,7 +39,7 @@ class App extends Component {
   }
 
   render() {
-  
+    console.log(this.state.favorites);
     return (
       <main className='main'>
         <Nav />
@@ -65,7 +65,7 @@ class App extends Component {
             !this.state.favorites.length ?
             <h3>No favorites yet!</h3>
             :
-            <Favorites />
+            <Favorites favoriteWords={this.state.favorites}/>
           )}
         />
       </main>
