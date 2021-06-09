@@ -7,6 +7,7 @@ A solo final project by [Michann Stoner](https://github.com/michannstoner). Orig
 * [Running Tests](#runningtests)
 * [Technologies](#technologies)
 * [Planning](#planning)
+* [Reflections](#reflections)
 
 
 ### Description
