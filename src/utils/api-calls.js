@@ -1,4 +1,10 @@
-
+const checkForError = response => {
+  if(!response.ok) {
+    return 'Something went wrong! Please try again later.'
+  } else {
+    return response.json()
+  }
+}
 
 const fetchWord = word => {
   fetch(`https://wordsapiv1.p.rapidapi.com/words/${word}`, {
