@@ -25,7 +25,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.wordToDisplay);
     return (
       <main className='main'>
         <Nav />
@@ -34,7 +33,8 @@ class App extends Component {
           <h2>welcome to ARTICULATE.</h2>
           <p>search for a word to learn more</p>
         </section>}
-        <WordInfo wordToDisplay={this.state.wordToDisplay}/>
+        {this.state.wordToDisplay && <WordInfo wordToDisplay={this.state.wordToDisplay}/>}
+        
       </main>
     )
   }
