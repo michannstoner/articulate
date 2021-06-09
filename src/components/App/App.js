@@ -24,7 +24,7 @@ class App extends Component {
       const wordData = filterWordData(data);
       this.setState({ wordToDisplay: wordData })
   })
-    .catch(error => this.setState({ error: 'Something went wrong, please try again later.'}))
+    .catch(error => this.setState({ error: 'Oops, something went wrong! Please search for a different word, or try again later.'}))
   }
 
   addToFavorites = event => {
@@ -45,7 +45,8 @@ class App extends Component {
           render={() => (
             <div>
               <Form submitSearch={this.submitSearch}/>
-              {!this.state.wordToDisplay && 
+              {this.state.error && <h3>{this.state.error}</h3>}
+              {!this.state.wordToDisplay && !this.state.error &&
                 <section className='welcome-display'>
                   <h2>welcome to ARTICULATE.</h2>
                   <p>search for a word to learn more</p>
