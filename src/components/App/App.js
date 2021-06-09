@@ -42,37 +42,39 @@ class App extends Component {
     return (
       <main className='main'>
         <Nav />
-        <Route exact path ='/'
-          render={() => (
-            <div>
-              <Form submitSearch={this.submitSearch}/>
-              {this.state.error && <h3>{this.state.error}</h3>}
-              {!this.state.wordToDisplay && !this.state.error &&
-                <section className='welcome-display'>
-                  <h2>welcome to ARTICULATE.</h2>
-                  <p>search for a word to learn more</p>
-                </section>}
-              {this.state.wordToDisplay &&
-                <WordInfo 
-                  wordToDisplay={this.state.wordToDisplay}
-                  addToFavorites={this.addToFavorites}
-                />}
-            </div>
-          )}
-        />
-        <Route exact path='/favorites'
-          render={() => (
-            !this.state.favorites.length ?
-            <h3>No favorites yet!</h3>
-            :
-            <Favorites favoriteWords={this.state.favorites}/>
-          )}
-        />
-        <Route 
-          render={() => (
-            <NotFound />
-          )}
-        />
+        <Switch>
+          <Route exact path ='/'
+            render={() => (
+              <div>
+                <Form submitSearch={this.submitSearch}/>
+                {this.state.error && <h3>{this.state.error}</h3>}
+                {!this.state.wordToDisplay && !this.state.error &&
+                  <section className='welcome-display'>
+                    <h2>welcome to ARTICULATE.</h2>
+                    <p>search for a word to learn more</p>
+                  </section>}
+                {this.state.wordToDisplay &&
+                  <WordInfo 
+                    wordToDisplay={this.state.wordToDisplay}
+                    addToFavorites={this.addToFavorites}
+                  />}
+              </div>
+            )}
+          />
+          <Route exact path='/favorites'
+            render={() => (
+              !this.state.favorites.length ?
+              <h3>No favorites yet!</h3>
+              :
+              <Favorites favoriteWords={this.state.favorites}/>
+            )}
+          />
+          <Route 
+            render={() => (
+              <NotFound />
+            )}
+          />
+        </Switch>
       </main>
     )
   }
