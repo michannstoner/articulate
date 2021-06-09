@@ -1,7 +1,9 @@
 import './App.css'
+import Favorites from '../Favorites/Favorites'
 import Form from '../Form/Form'
 import Nav from '../Nav/Nav'
 import React, { Component } from 'react'
+import { Route, Link } from 'react-router-dom'
 import WordInfo from '../WordInfo/WordInfo'
 
 class App extends Component {
@@ -41,6 +43,8 @@ class App extends Component {
     return (
       <main className='main'>
         <Nav />
+        <Route exact path ='/'
+        render={()}
         <Form submitSearch={this.submitSearch}/>
         {!this.state.wordToDisplay && <section className='welcome-display'>
           <h2>welcome to ARTICULATE.</h2>
@@ -51,6 +55,14 @@ class App extends Component {
             wordToDisplay={this.state.wordToDisplay}
             addToFavorites={this.addToFavorites}
         />}
+        <Route exact path='/favorites'
+          render={() => (
+            !this.state.favorites.length ?
+            <h3>No favorites yet!</h3>
+            :
+            <Favorites />
+          )}
+        />
       </main>
     )
   }
