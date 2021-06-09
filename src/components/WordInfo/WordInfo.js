@@ -1,7 +1,7 @@
 import './WordInfo.css'
 import Word from '../Word/Word'
 
-const WordInfo = ({ wordToDisplay }) => {
+const WordInfo = ({ wordToDisplay, addToFavorites }) => {
   const word = 
     <Word
       key={wordToDisplay.frequency}
@@ -13,7 +13,7 @@ const WordInfo = ({ wordToDisplay }) => {
   return (
     <section className='word-container'>
       {word}
-      <button>favorites</button>
+      <button onClick={event => addToFavorites(event)}>favorites</button>
     </section>
   )
 }
