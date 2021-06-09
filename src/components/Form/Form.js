@@ -8,13 +8,23 @@ class Form extends Component {
       searchBarValue: ''
     }
   }
-
+  
   handleChange = event => {
     this.setState({ searchBarValue: event.target.value })
   }
 
+  inputSearch = event => {
+    event.preventDefault()
+    this.props.submitSearch(this.state.searchBarValue)
+    this.clearInputs(event)
+  }
+
+  clearInputs = event => {
+    event.preventDefault()
+    this.setState({ searchBarValue: '' })
+  }
+
   render() {
-    console.log(this.state.searchBarValue)
     return (
       <form className='search-bar'>
         <input 
@@ -23,7 +33,7 @@ class Form extends Component {
           value={this.state.searchBarValue}
           onChange={event => this.handleChange(event)}
         />
-        <button>search</button>
+        <button onClick={event => this.inputSearch(event)}>search</button>
       </form>
     )
   }
