@@ -1,5 +1,6 @@
 import './App.css'
 import Favorites from '../Favorites/Favorites'
+import { fetchWord } from '../../utils/api-calls'
 import Form from '../Form/Form'
 import Nav from '../Nav/Nav'
 import React, { Component } from 'react'
@@ -11,19 +12,13 @@ class App extends Component {
     super()
     this.state = {
       wordToDisplay: '',
-      favorites: []
+      favorites: [],
+      error: ''
     }
   }
 
   submitSearch = word => {
-    fetch(`https://wordsapiv1.p.rapidapi.com/words/${word}`, {
-	      "method": "GET",
-	      "headers": {
-		      "x-rapidapi-key": "247406a57bmsh73bf0cce7ec0b4cp15cc72jsnf9d8d4aae1f1",
-		      "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
-	      }
-    })
-    .then(response => response.json())
+    fetchWord(word)
     .then(data => this.setState({ wordToDisplay: data }))
   }
 
