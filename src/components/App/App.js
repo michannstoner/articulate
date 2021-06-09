@@ -4,8 +4,9 @@ import { fetchWord } from '../../utils/api-calls'
 import { filterWordData } from '../../utils/cleaning-functions'
 import Form from '../Form/Form'
 import Nav from '../Nav/Nav'
+import NotFound from '../NotFound/NotFound'
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import WordInfo from '../WordInfo/WordInfo'
 
 class App extends Component {
@@ -65,6 +66,11 @@ class App extends Component {
             <h3>No favorites yet!</h3>
             :
             <Favorites favoriteWords={this.state.favorites}/>
+          )}
+        />
+        <Route 
+          render={() => (
+            <NotFound />
           )}
         />
       </main>
