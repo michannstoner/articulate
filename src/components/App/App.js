@@ -8,7 +8,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      wordToDisplay: ''
+      wordToDisplay: '',
+      favorites: []
     }
   }
 
@@ -34,7 +35,6 @@ class App extends Component {
           <p>search for a word to learn more</p>
         </section>}
         {this.state.wordToDisplay && <WordInfo wordToDisplay={this.state.wordToDisplay}/>}
-        
       </main>
     )
   }
