@@ -20,6 +20,7 @@ class App extends Component {
   submitSearch = word => {
     fetchWord(word)
     .then(data => this.setState({ wordToDisplay: data }))
+    .catch(error => this.setState({ error: 'Something went wrong, please try again later.'}))
   }
 
   addToFavorites = event => {
