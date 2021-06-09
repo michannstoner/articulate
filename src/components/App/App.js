@@ -39,7 +39,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.favorites);
     return (
       <main className='main'>
         <Nav />
