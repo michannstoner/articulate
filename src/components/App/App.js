@@ -5,7 +5,7 @@ import { filterWordData } from '../../utils/cleaning-functions'
 import Form from '../Form/Form'
 import Nav from '../Nav/Nav'
 import React, { Component } from 'react'
-import { Route, Link } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import WordInfo from '../WordInfo/WordInfo'
 
 class App extends Component {
