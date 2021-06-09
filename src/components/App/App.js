@@ -2,6 +2,7 @@ import './App.css'
 import Form from '../Form/Form'
 import Nav from '../Nav/Nav'
 import React, { Component } from 'react'
+import WordInfo from '../WordInfo/WordInfo'
 
 class App extends Component {
   constructor() {
@@ -29,10 +30,11 @@ class App extends Component {
       <main className='main'>
         <Nav />
         <Form submitSearch={this.submitSearch}/>
-        <section className='welcome-display'>
+        {!this.state.wordToDisplay && <section className='welcome-display'>
           <h2>welcome to ARTICULATE.</h2>
           <p>search for a word to learn more</p>
-        </section>
+        </section>}
+        <WordInfo wordToDisplay={this.state.wordToDisplay}/>
       </main>
     )
   }
