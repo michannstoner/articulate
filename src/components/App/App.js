@@ -44,17 +44,24 @@ class App extends Component {
       <main className='main'>
         <Nav />
         <Route exact path ='/'
-        render={()}
-        <Form submitSearch={this.submitSearch}/>
-        {!this.state.wordToDisplay && <section className='welcome-display'>
-          <h2>welcome to ARTICULATE.</h2>
-          <p>search for a word to learn more</p>
-        </section>}
-        {this.state.wordToDisplay && 
-          <WordInfo 
-            wordToDisplay={this.state.wordToDisplay}
-            addToFavorites={this.addToFavorites}
-        />}
+          render={() => (
+            <div>
+              <Form submitSearch={this.submitSearch}/>
+              {!this.state.wordToDisplay && <section className='welcome-display'>
+              <h2>welcome to ARTICULATE.</h2>
+              <p>search for a word to learn more</p>
+              </section>}
+              {this.state.wordToDisplay &&<WordInfo 
+              wordToDisplay={this.state.wordToDisplay}
+              addToFavorites={this.addToFavorites}
+          />}
+
+            </div>
+
+          )}
+        />
+        
+         
         <Route exact path='/favorites'
           render={() => (
             !this.state.favorites.length ?
