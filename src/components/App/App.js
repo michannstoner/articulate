@@ -16,6 +16,10 @@ class App extends Component {
       <main className='main'>
         <Nav />
         <Form />
+        <section className='welcome-display'>
+          <h2>welcome to ARTICULATE.</h2>
+          <p>search for a word to learn more</p>
+        </section>
       </main>
     )
   }
