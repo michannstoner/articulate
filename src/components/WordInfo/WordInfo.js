@@ -6,10 +6,11 @@ const WordInfo = ({ wordToDisplay }) => {
     <Word
       key={wordToDisplay.frequency}
       word={wordToDisplay.word}
-      // definition={wordToDisplay.results[0].definition}
+      definition={wordToDisplay.results[0].definition}
+      pronunciation={wordToDisplay.pronunciation.all}
       // example={wordToDisplay.results[0].examples[0]} 
     />
-
+  
   return (
     <section className='word-container'>
       {word}
