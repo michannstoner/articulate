@@ -13,6 +13,7 @@ const WordInfo = ({ wordToDisplay }) => {
   return (
     <section className='word-container'>
       {word}
+      <button>favorites</button>
     </section>
   )
 }
