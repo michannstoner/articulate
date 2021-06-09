@@ -1,6 +1,7 @@
 import './App.css'
 import Favorites from '../Favorites/Favorites'
 import { fetchWord } from '../../utils/api-calls'
+import { filterWordData } from '../../utils/cleaning-functions'
 import Form from '../Form/Form'
 import Nav from '../Nav/Nav'
 import React, { Component } from 'react'
@@ -19,7 +20,10 @@ class App extends Component {
 
   submitSearch = word => {
     fetchWord(word)
-    .then(data => this.setState({ wordToDisplay: data }))
+    .then(data => {
+      const wordData = filterWordData(data);
+      this.setState({ wordToDisplay: wordData })
+  })
     .catch(error => this.setState({ error: 'Something went wrong, please try again later.'}))
   }
 
@@ -35,6 +39,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.wordToDisplay);
     return (
       <main className='main'>
         <Nav />
