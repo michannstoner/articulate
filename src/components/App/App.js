@@ -35,11 +35,9 @@ class App extends Component {
     if (!favorites.includes(wordToAdd)) {
       this.setState({favorites: [...favorites, wordToAdd]})
     }
-
   }
 
   render() {
-    console.log(this.state.wordToDisplay);
     return (
       <main className='main'>
         <Nav />
