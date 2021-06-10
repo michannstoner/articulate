@@ -17,4 +17,10 @@ const Favorites = ({ favoriteWords }) => {
   )
 }
 
+Favorites.propTypes = {
+  favoriteWords: propTypes.array,
+  // key: propTypes.number,
+  // word: propTypes.string
+}
+
 export default Favorites
