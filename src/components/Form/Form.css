@@ -8,11 +8,12 @@
 
 input {
   font-family: 'Roboto Mono', 'monospace';
-  background-color: #F4BC61;
+  background-color: white;
   border: none;
   height: 2.5em;
   width: 25em;
   color: black;
+  padding-left: 1em;
 }
 
 .search-button {
