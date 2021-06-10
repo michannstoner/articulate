@@ -41,7 +41,7 @@ class Form extends Component {
 }
 
 Form.propTypes = {
-  submitSearch: propTypes.func
+  submitSearch: PropTypes.func
 }
 
 export default Form
