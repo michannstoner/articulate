@@ -2,7 +2,44 @@ body {
   background-color: #F3E9D8;
 }
 
-.welcome-display {
-  margin-left: 5em;
+.main {
+  display: flex;
+  flex-direction: column;
 }
+
+.welcome-display {
+  display: flex;
+  justify-content: space-between;
+  width: 95vw;
+  height: 70vh;
+  margin-left: 5vw;
+  margin-top: 3em;
+}
+
+.welcome-header {
+  font-family: 'Work Sans', 'sans-serif';
+  font-size: 40px;
+}
+
+.search-to-learn {
+  font-family: 'Roboto Mono', 'monospace';
+  font-size: 18px;
+}
+
+.decorative-box {
+  width: 16vw;
+  height: 55vh;
+  background-color: #E1CBBD;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 30em;
+  height: 20em;
+  margin-left: 22em;
+}
+
 
