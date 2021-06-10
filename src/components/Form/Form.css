@@ -1,7 +1,7 @@
 .search-bar {
   display: flex;
   align-items: center;
-  width: 22em;
+  width: 26em;
   margin-top: 2em;
   margin-left: 7em;
 }
@@ -11,12 +11,12 @@ input {
   background-color: #F4BC61;
   border: none;
   height: 2.5em;
-  width: 20em;
+  width: 25em;
   color: black;
 }
 
 .search-button {
-  width: 2em;
-  height: 2em;
+  width: 1.75em;
+  height: 1.75em;
   margin-left: 0.5em;
 }
