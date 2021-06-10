@@ -1,4 +1,13 @@
 .search-bar {
   margin-top: 2em;
-  margin-left: 5em;
+  margin-left: 7em;
+}
+
+input {
+  font-family: 'Roboto Mono', 'monospace';
+  background-color: #F4BC61;
+  border: none;
+  height: 2.5em;
+  width: 20em;
+  color: black;
 }
