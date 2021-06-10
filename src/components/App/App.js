@@ -50,8 +50,11 @@ class App extends Component {
                 {this.state.error && <h3>{this.state.error}</h3>}
                 {!this.state.wordToDisplay && !this.state.error &&
                   <section className='welcome-display'>
-                    <h2>welcome to ARTICULATE.</h2>
-                    <p>search for a word to learn more</p>
+                    <div className='message-container'>
+                      <h2 className='welcome-header'>welcome to ARTICULATE.</h2>
+                      <p className='search-to-learn'>look up a word & start learning</p>
+                    </div>
+                    <div className='decorative-box'></div>
                   </section>}
                 {this.state.wordToDisplay &&
                   <WordInfo 
