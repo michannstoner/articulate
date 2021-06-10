@@ -10,7 +10,9 @@ const Nav = () => {
       <h1 className='page-header'>A.</h1>
     </Link>
     <Link to={'/favorites'} style={linkStyle}>
+    <div className='link-divider'>
       <ul className='favorites-link'>favorites</ul>
+      </div>
     </Link>
     </nav>
   )
