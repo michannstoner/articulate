@@ -1,5 +1,6 @@
 import './Favorites.css'
 import Word from '../Word/Word'
+import propTypes from 'prop-types'
 
 const Favorites = ({ favoriteWords }) => {
   const wordsToDisplay = favoriteWords.map(word => {
