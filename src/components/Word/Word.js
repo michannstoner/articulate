@@ -1,4 +1,5 @@
 import './Word.css' 
+import PropTypes from 'prop-types'
 
 const Word = ({ word, pronunciation, definition }) => {
   return (
@@ -8,6 +9,12 @@ const Word = ({ word, pronunciation, definition }) => {
       <p>{definition}</p>
     </article>
   )
+}
+
+Word.propTypes = {
+  word: PropTypes.string,
+  pronunciation: PropTypes.string,
+  definition: PropTypes.string
 }
 
 export default Word

@@ -1,5 +1,6 @@
 import './Favorites.css'
 import Word from '../Word/Word'
+import propTypes from 'prop-types'
 
 const Favorites = ({ favoriteWords }) => {
   const wordsToDisplay = favoriteWords.map(word => {
@@ -14,6 +15,12 @@ const Favorites = ({ favoriteWords }) => {
       {wordsToDisplay}
     </section>
   )
+}
+
+Favorites.propTypes = {
+  favoriteWords: propTypes.array,
+  // key: propTypes.number,
+  // word: propTypes.string
 }
 
 export default Favorites
