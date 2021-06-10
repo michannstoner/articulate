@@ -1,4 +1,7 @@
 .search-bar {
+  display: flex;
+  align-items: center;
+  width: 22em;
   margin-top: 2em;
   margin-left: 7em;
 }
@@ -10,4 +13,10 @@ input {
   height: 2.5em;
   width: 20em;
   color: black;
+}
+
+.search-button {
+  width: 2em;
+  height: 2em;
+  margin-left: 0.5em;
 }
