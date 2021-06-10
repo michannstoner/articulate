@@ -7,10 +7,10 @@ const Nav = () => {
   return (
     <nav className='nav'>
     <Link to='/' style={linkStyle}>
-      <h1>A.</h1>
+      <h1 className='page-header'>A.</h1>
     </Link>
     <Link to={'/favorites'} style={linkStyle}>
-      <ul>favorites</ul>
+      <ul className='favorites-link'>favorites</ul>
     </Link>
     </nav>
   )
