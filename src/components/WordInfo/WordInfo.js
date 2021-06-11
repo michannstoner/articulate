@@ -3,10 +3,10 @@ import Word from '../Word/Word'
 import PropTypes from 'prop-types'
 import blueBlobIcon from '../../assets/blue-blob-icon.png'
 import heartIcon from '../../assets/heart-icon.png'
-import pinkBlob from '../../assets/pink-blob.png'
 
 const WordInfo = ({ wordToDisplay, addToFavorites }) => {
   const formattedSynonyms = wordToDisplay.synonyms.join(', ')
+  
   const word = 
     <Word
       key={wordToDisplay.frequency}
@@ -18,7 +18,7 @@ const WordInfo = ({ wordToDisplay, addToFavorites }) => {
   
   return (
     <section className='word-container'>
-      <img className='blue-blob-icon'src={blueBlobIcon}/>
+      <img className='blue-blob-icon'src={blueBlobIcon} alt='abstract blue blob icon'/>
       {word}
      
       <div className='favorite-button-container'>
