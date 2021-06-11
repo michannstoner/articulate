@@ -1,0 +1,32 @@
+.single-word {
+  font-family: 'Work Sans', 'sans-serif';
+  font-size: 650%;
+  justify-self: center;
+  margin: 0;
+}
+
+.definition-divider {
+  display: flex;
+  border-bottom: 1px solid black;
+  width: 23em;
+  align-items: center;
+}
+
+.definition {
+  font-size: 100%;
+  margin-left: 1em;
+}
+
+.word-card {
+  width: 30em;
+  margin-top: 3em;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+.pink-square {
+  width: 1em;
+  height: 1em;
+}

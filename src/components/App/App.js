@@ -1,4 +1,5 @@
 import './App.css'
+import blobIcon from '../../assets/blob-icon.png'
 import Favorites from '../Favorites/Favorites'
 import { fetchWord } from '../../utils/api-calls'
 import { filterWordData } from '../../utils/cleaning-functions'
@@ -50,8 +51,11 @@ class App extends Component {
                 {this.state.error && <h3>{this.state.error}</h3>}
                 {!this.state.wordToDisplay && !this.state.error &&
                   <section className='welcome-display'>
-                    <h2>welcome to ARTICULATE.</h2>
-                    <p>search for a word to learn more</p>
+                    <div className='message-container'>
+                      <img src={blobIcon} />
+                      <div className='welcome-header'>welcome to ARTICULATE.</div>
+                      <div className='search-to-learn'>look up a word & start learning</div>
+                    </div>
                   </section>}
                 {this.state.wordToDisplay &&
                   <WordInfo 

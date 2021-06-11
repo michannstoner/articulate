@@ -1,12 +1,17 @@
 import './Word.css' 
 import PropTypes from 'prop-types'
+import pinkSquare from '../../assets/pink-square-icon.png'
 
-const Word = ({ word, pronunciation, definition }) => {
+const Word = ({ word, pronunciation, definition, synonyms }) => {
   return (
     <article className='word-card'>
-      <h3>{word}</h3>
-      <p>{pronunciation}</p>
-      <p>{definition}</p>
+      <h3 className='single-word'>{word}</h3>
+      <div className='definition-divider'>
+        <img className='pink-square' src={pinkSquare} alt='decorative pink square icon'/>
+        <p className='definition'>{definition}</p>
+      </div>
+      <p><strong>pronunciation:</strong> {pronunciation}</p>
+      <p><strong>synonyms:</strong> {synonyms}</p>
     </article>
   )
 }

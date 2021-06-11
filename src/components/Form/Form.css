@@ -1,4 +1,23 @@
 .search-bar {
+  display: flex;
+  align-items: center;
+  width: 26em;
   margin-top: 2em;
-  margin-left: 5em;
+  margin-left: 7em;
+}
+
+input {
+  font-family: 'Roboto Mono', 'monospace';
+  background-color: white;
+  border: none;
+  height: 2.5em;
+  width: 25em;
+  color: black;
+  padding-left: 1em;
+}
+
+.search-button {
+  width: 1.75em;
+  height: 1.75em;
+  margin-left: 0.5em;
 }
