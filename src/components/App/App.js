@@ -39,7 +39,16 @@ class App extends Component {
     }
   }
 
+  removeFromFavorites = (event) => {
+    const updatedFavorites = this.state.favorites.filter(word => {
+      return word.frequency !== parseFloat(event.target.id) 
+    })
+
+    this.setState({ favorites: updatedFavorites })
+  }
+
   render() {
+    
     return (
       <main className='main'>
         <Nav />
@@ -52,7 +61,7 @@ class App extends Component {
                 {!this.state.wordToDisplay && !this.state.error &&
                   <section className='welcome-display'>
                     <div className='message-container'>
-                      <img src={blobIcon} />
+                      <img src={blobIcon} alt='pink abstract blob icon'/>
                       <div className='welcome-header'>welcome to ARTICULATE.</div>
                       <div className='search-to-learn'>look up a word & start learning</div>
                     </div>
@@ -70,7 +79,10 @@ class App extends Component {
               !this.state.favorites.length ?
               <h3>No favorites yet!</h3>
               :
-              <Favorites favoriteWords={this.state.favorites}/>
+              <Favorites 
+                favoriteWords={this.state.favorites} 
+                removeFromFavorites={this.removeFromFavorites}
+              />
             )}
           />
           <Route 

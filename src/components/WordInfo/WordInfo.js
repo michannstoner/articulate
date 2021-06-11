@@ -3,22 +3,27 @@ import Word from '../Word/Word'
 import PropTypes from 'prop-types'
 import blueBlobIcon from '../../assets/blue-blob-icon.png'
 import heartIcon from '../../assets/heart-icon.png'
-import pinkBlob from '../../assets/pink-blob.png'
 
 const WordInfo = ({ wordToDisplay, addToFavorites }) => {
-  const formattedSynonyms = wordToDisplay.synonyms.join(', ')
+  const unavailableMessage = 'unavailable for this word, sorry!'
+
+  const formattedSynonyms = !wordToDisplay.synonyms ? unavailableMessage : wordToDisplay.synonyms.join(', ')
+
+  const formattedExamples = !wordToDisplay.example ? unavailableMessage : wordToDisplay.example.join(', ')
+  
   const word = 
     <Word
       key={wordToDisplay.frequency}
       word={wordToDisplay.word}
       definition={wordToDisplay.definition}
-      pronunciation={wordToDisplay.pronunciation}
+      pronunciation={wordToDisplay.pronunciation || unavailableMessage}
       synonyms={formattedSynonyms}
+      example={formattedExamples}
     />
   
   return (
     <section className='word-container'>
-      <img className='blue-blob-icon'src={blueBlobIcon}/>
+      <img className='blue-blob-icon'src={blueBlobIcon} alt='abstract blue blob icon'/>
       {word}
      
       <div className='favorite-button-container'>
