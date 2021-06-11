@@ -1,6 +1,7 @@
 import './WordInfo.css'
 import Word from '../Word/Word'
 import PropTypes from 'prop-types'
+import blueBlobIcon from '../../assets/blue-blob-icon.png'
 
 const WordInfo = ({ wordToDisplay, addToFavorites }) => {
   const word = 
@@ -13,8 +14,10 @@ const WordInfo = ({ wordToDisplay, addToFavorites }) => {
   
   return (
     <section className='word-container'>
+      <div>
       {word}
       <button onClick={event => addToFavorites(event)}>favorites</button>
+      </div>
     </section>
   )
 }
