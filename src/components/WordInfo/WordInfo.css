@@ -5,3 +5,21 @@
   /* border: solid blue 1px; */
   justify-content: center;
 }
+
+.heart-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.favorite-button-container {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid red; */
+  height: 2.5em;
+  width: 10em;
+  border-bottom: 1px solid black;
+}
+
+.add-to-favorites {
+  margin-left: 1em;
+}
