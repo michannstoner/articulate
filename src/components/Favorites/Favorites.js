@@ -21,8 +21,7 @@ const Favorites = ({ favoriteWords, removeFromFavorites }) => {
 
 Favorites.propTypes = {
   favoriteWords: propTypes.array,
-  // key: propTypes.number,
-  // word: propTypes.string
+  removeFromFavorites: propTypes.func,
 }
 
 export default Favorites
