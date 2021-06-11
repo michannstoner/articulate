@@ -1,6 +1,6 @@
 .single-word {
   font-family: 'Work Sans', 'sans-serif';
-  font-size: 700%;
+  font-size: 650%;
   justify-self: center;
   margin: 0;
 }
@@ -18,9 +18,12 @@
 }
 
 .word-card {
-  /* border: solid red 1px; */
   width: 30em;
-  margin-top: 5em;
+  margin-top: 3em;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
 }
 
 .pink-square {
