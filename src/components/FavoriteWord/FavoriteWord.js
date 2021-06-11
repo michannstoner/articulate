@@ -1,10 +1,11 @@
 import './FavoriteWord.css'
+import minusIcon from '../../assets/minus-icon.png'
 
-const FavoriteWord = ({ word }) => {
+const FavoriteWord = ({ word, id, removeFromFavorites }) => {
   return (
     <div className='fav-word-container'>
       <ul>{word}</ul>
-      <button>remove</button>
+      <img id={id} onClick={removeFromFavorites} className='minus-icon' src={minusIcon} alt='minus icon remove from favorites'/>
     </div>
   )
 }
