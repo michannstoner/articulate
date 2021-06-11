@@ -3,23 +3,24 @@ import Word from '../Word/Word'
 import PropTypes from 'prop-types'
 import blueBlobIcon from '../../assets/blue-blob-icon.png'
 import heartIcon from '../../assets/heart-icon.png'
+import pinkBlob from '../../assets/pink-blob.png'
 
 const WordInfo = ({ wordToDisplay, addToFavorites }) => {
+  const formattedSynonyms = wordToDisplay.synonyms.join(', ')
   const word = 
     <Word
       key={wordToDisplay.frequency}
       word={wordToDisplay.word}
       definition={wordToDisplay.definition}
       pronunciation={wordToDisplay.pronunciation}
-      synonyms={wordToDisplay.synonyms}
+      synonyms={formattedSynonyms}
     />
   
   return (
     <section className='word-container'>
-      <div>
-
+      <img className='blue-blob-icon'src={blueBlobIcon}/>
       {word}
-      </div>
+     
       <div className='favorite-button-container'>
         <img className='heart-icon' src={heartIcon} alt='heart icon' onClick={event => addToFavorites(event)}/>
         <p className='add-to-favorites'>add to favorites</p>
