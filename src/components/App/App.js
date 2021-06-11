@@ -39,7 +39,16 @@ class App extends Component {
     }
   }
 
+  removeFromFavorites = (event) => {
+    const updatedFavorites = this.state.favorites.filter(word => {
+      return word.frequency !== parseFloat(event.target.id) 
+    })
+
+    this.setState({ favorites: updatedFavorites })
+  }
+
   render() {
+    console.log(this.state.favorites);
     return (
       <main className='main'>
         <Nav />
@@ -70,7 +79,7 @@ class App extends Component {
               !this.state.favorites.length ?
               <h3>No favorites yet!</h3>
               :
-              <Favorites favoriteWords={this.state.favorites}/>
+              <Favorites favoriteWords={this.state.favorites} removeFromFavorites={this.removeFromFavorites}/>
             )}
           />
           <Route 
