@@ -48,7 +48,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.favorites);
     return (
       <main className='main'>
         <Nav />
@@ -79,7 +78,10 @@ class App extends Component {
               !this.state.favorites.length ?
               <h3>No favorites yet!</h3>
               :
-              <Favorites favoriteWords={this.state.favorites} removeFromFavorites={this.removeFromFavorites}/>
+              <Favorites 
+                favoriteWords={this.state.favorites} 
+                removeFromFavorites={this.removeFromFavorites}
+              />
             )}
           />
           <Route 
