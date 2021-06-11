@@ -4,7 +4,8 @@ const filterWordData = wordData => {
     'word': wordData.word,
     'definition': wordData.results[0].definition,
     'pronunciation': wordData.pronunciation.all,
-    'synonyms': wordData.results[0].synonyms
+    'synonyms': wordData.results[0].synonyms,
+    'example': wordData.results[0].examples
   }
   
   return filteredData;
