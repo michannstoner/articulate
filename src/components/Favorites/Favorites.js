@@ -5,11 +5,11 @@ import propTypes from 'prop-types'
 const Favorites = ({ favoriteWords, removeFromFavorites }) => {
   const favoritesList = favoriteWords.map(word => {
     return <FavoriteWord 
-          key={word.frequency}
-          word={word.word}
-          id={word.frequency}
-          removeFromFavorites={removeFromFavorites}
-          />
+              key={word.frequency}
+              word={word.word}
+              id={word.frequency}
+              removeFromFavorites={removeFromFavorites}
+            />
   })
 
   return (
