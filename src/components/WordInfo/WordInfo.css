@@ -2,8 +2,6 @@
   display: flex;
   width: 95vw;
   height: 70vh;
-  border: solid blue 1px;
+  /* border: solid blue 1px; */
   justify-content: center;
-  margin-left: 4em;
-  margin-top: 3em;
 }
