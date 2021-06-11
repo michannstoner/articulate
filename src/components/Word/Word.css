@@ -1,6 +1,29 @@
 .single-word {
   font-family: 'Work Sans', 'sans-serif';
-  font-size: 100px;
+  font-size: 700%;
   justify-self: center;
+  margin: 0;
 }
 
+.definition-divider {
+  display: flex;
+  border-bottom: 1px solid black;
+  width: 23em;
+  align-items: center;
+}
+
+.definition {
+  font-size: 100%;
+  margin-left: 1em;
+}
+
+.word-card {
+  /* border: solid red 1px; */
+  width: 30em;
+  margin-top: 5em;
+}
+
+.pink-square {
+  width: 1em;
+  height: 1em;
+}
