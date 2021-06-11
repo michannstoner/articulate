@@ -52,7 +52,7 @@ class App extends Component {
                 {!this.state.wordToDisplay && !this.state.error &&
                   <section className='welcome-display'>
                     <div className='message-container'>
-                      <img src={blobIcon} />
+                      <img src={blobIcon} alt='pink abstract blob icon'/>
                       <div className='welcome-header'>welcome to ARTICULATE.</div>
                       <div className='search-to-learn'>look up a word & start learning</div>
                     </div>
