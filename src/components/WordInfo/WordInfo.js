@@ -10,6 +10,7 @@ const WordInfo = ({ wordToDisplay, addToFavorites }) => {
       word={wordToDisplay.word}
       definition={wordToDisplay.definition}
       pronunciation={wordToDisplay.pronunciation}
+      synonyms={wordToDisplay.synonyms}
     />
   
   return (
