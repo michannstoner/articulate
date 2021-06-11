@@ -1,18 +1,18 @@
 import './Favorites.css'
-import Word from '../Word/Word'
+import FavoriteWord from '../FavoriteWord/FavoriteWord'
 import propTypes from 'prop-types'
 
 const Favorites = ({ favoriteWords }) => {
-  const wordsToDisplay = favoriteWords.map(word => {
-    return <Word
-              key={word.frequency}
-              word={word.word}
-          />     
+  const favoritesList = favoriteWords.map(word => {
+    return <FavoriteWord 
+          key={word.frequency}
+          word={word.word}
+          />
   })
 
   return (
-    <section className='favorites-section'>
-      {wordsToDisplay}
+    <section> 
+      {favoritesList}
     </section>
   )
 }
