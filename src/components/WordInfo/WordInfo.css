@@ -1,9 +1,11 @@
 .word-container {
   display: flex;
-  width: 95vw;
-  height: 70vh;
-  /* border: solid blue 1px; */
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 75vh;
   justify-content: center;
+  margin-top: 1em;
 }
 
 .heart-icon {
@@ -14,12 +16,24 @@
 .favorite-button-container {
   display: flex;
   align-items: center;
-  /* border: 1px solid red; */
+  align-self: flex-end;
   height: 2.5em;
   width: 10em;
   border-bottom: 1px solid black;
+  
+  margin-right: 5em;
+  position: absolute;
+  top: 92%;
+  left: 90%;
+  transform: translate(-50%, -50%);
 }
 
 .add-to-favorites {
   margin-left: 1em;
+}
+
+.blue-blob {
+  align-self: flex-end;
+  overflow-x: hidden;
+  margin-bottom: 4em;
 }
