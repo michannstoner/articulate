@@ -9,6 +9,8 @@ import NotFound from '../NotFound/NotFound'
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import WordInfo from '../WordInfo/WordInfo'
+import homeIcon from '../../assets/home-icon.png'
+import { Link } from 'react-router-dom'
 
 class App extends Component {
   constructor() {
@@ -47,11 +49,15 @@ class App extends Component {
     this.setState({ favorites: updatedFavorites })
   }
 
+  resetPage = () => {
+    this.setState({ wordToDisplay: '' })
+  }
+
   render() {
     
     return (
       <main className='main'>
-        <Nav />
+        <Nav resetPage={this.resetPage}/>
         <Switch>
           <Route exact path ='/'
             render={() => (
@@ -77,12 +83,23 @@ class App extends Component {
           <Route exact path='/favorites'
             render={() => (
               !this.state.favorites.length ?
-              <h3>No favorites yet!</h3>
+              <div>
+                <h3 className='no-favorites'>Nothing in favorites yet!</h3>
+                <div className='favorite-button-container'>
+                <Link to='/'>
+                  <img className='heart-icon' src={homeIcon} alt='home icon' onClick={this.resetPage}/>
+                </Link>
+                <p className='add-to-favorites'>back to home</p>
+            </div>
+
+              </div>
               :
               <Favorites 
                 favoriteWords={this.state.favorites} 
                 removeFromFavorites={this.removeFromFavorites}
+                resetPage={this.resetPage}
               />
+              
             )}
           />
           <Route 
