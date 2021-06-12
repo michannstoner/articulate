@@ -2,6 +2,7 @@ import './Favorites.css'
 import FavoriteWord from '../FavoriteWord/FavoriteWord'
 import propTypes from 'prop-types'
 
+
 const Favorites = ({ favoriteWords, removeFromFavorites }) => {
   const favoritesList = favoriteWords.map(word => {
     return <FavoriteWord 
@@ -13,7 +14,8 @@ const Favorites = ({ favoriteWords, removeFromFavorites }) => {
   })
 
   return (
-    <section> 
+    <section className='favorites-section'>
+      <h2 className='favorites-header'>Favorites</h2>
       {favoritesList}
     </section>
   )
