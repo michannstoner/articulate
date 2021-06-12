@@ -1,9 +1,11 @@
 import './Favorites.css'
 import FavoriteWord from '../FavoriteWord/FavoriteWord'
+import homeIcon from '../../assets/home-icon.png'
+import { Link } from 'react-router-dom'
 import propTypes from 'prop-types'
 
 
-const Favorites = ({ favoriteWords, removeFromFavorites }) => {
+const Favorites = ({ favoriteWords, removeFromFavorites, resetPage }) => {
   const favoritesList = favoriteWords.map(word => {
     return <FavoriteWord 
               key={word.frequency}
@@ -17,6 +19,12 @@ const Favorites = ({ favoriteWords, removeFromFavorites }) => {
     <section className='favorites-section'>
       <h2 className='favorites-header'>Favorites</h2>
       {favoritesList}
+      <div className='favorite-button-container'>
+        <Link to='/'>
+          <img className='heart-icon' src={homeIcon} alt='home icon' onClick={resetPage}/>
+        </Link>
+        <p className='add-to-favorites'>back to home</p>
+      </div>
     </section>
   )
 }
