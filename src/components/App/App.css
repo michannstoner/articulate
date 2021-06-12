@@ -45,3 +45,9 @@ body {
   margin-left: 20em;
 }
 
+.no-favorites {
+  font-family: 'Work Sans', 'sans-serif';
+  font-weight:normal;
+  margin-left: 6em;
+  margin-top: 4em;
+}
