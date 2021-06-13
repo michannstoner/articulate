@@ -26,7 +26,6 @@
   height: 2.5em;
   width: 10em;
   border-bottom: 1px solid black;
-  
   margin-right: 5em;
   position: absolute;
   top: 92%;
@@ -43,4 +42,16 @@
   align-self: flex-end;
   overflow-x: hidden;
   margin-bottom: 4em;
+}
+
+@media only screen and (max-width: 640px) {
+  .blue-blob-icon {
+    width: 95vw;
+  }
+
+  .favorite-button-container {
+    margin-right: 0;
+    margin-left: 0;
+    left: 80%;
+  }
 }
