@@ -56,4 +56,12 @@ describe('Homepage', () => {
       .get('.search-button').click()
       .get('.error-message').should('be.visible').should('contain', 'Oops, something went wrong! Please search for a different word, or try again later.')
   })
+
+  it('should display an add to favorites icon when the word is being displayed', () => {
+    cy.get('input[type="text"]')
+      .type('grateful')
+      .get('.search-button').click()
+      .get('.add-to-favorites').should('be.visible').should('contain', 'add to favorites')
+      .get('.heart-icon').should('be.visible').click()
+  })
 })
