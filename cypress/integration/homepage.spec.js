@@ -45,7 +45,7 @@ describe('Homepage', () => {
                 delay: 100,
                 body: testData[0]
               })
-            })
+          })
     })
         
 
@@ -91,21 +91,21 @@ describe('Homepage', () => {
         .type('happy')
         .get('.search-button').click()
         .fixture('test-data.json')
-        .then(testData => {
-          cy.intercept('https://wordsapiv1.p.rapidapi.com/words/happy', 
-            {
-              "method": "GET",
-              "headers": 
+          .then(testData => {
+            cy.intercept('https://wordsapiv1.p.rapidapi.com/words/happy', 
               {
-                "x-rapidapi-key": "247406a57bmsh73bf0cce7ec0b4cp15cc72jsnf9d8d4aae1f1",
-                "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
-              }
-            }, 
-            {
-              statusCode: 201,
-              delay: 100,
-              body: testData[1]
-            })
+                "method": "GET",
+                "headers": 
+                {
+                  "x-rapidapi-key": "247406a57bmsh73bf0cce7ec0b4cp15cc72jsnf9d8d4aae1f1",
+                  "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
+                }
+              }, 
+              {
+                statusCode: 201,
+                delay: 100,
+                body: testData[1]
+              })
           })
         .get('input[placeholder="search for a word"]').should('be.visible').should('have.value', '')
     })

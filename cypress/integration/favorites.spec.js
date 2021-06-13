@@ -21,22 +21,22 @@ describe('Favorites', () => {
       .get('input[type="text"]').type('lucky')
       .get('.search-button').click()
       .fixture('test-data.json')
-            .then(testData => {
-              cy.intercept('https://wordsapiv1.p.rapidapi.com/words/lucky', 
-                {
-                  "method": "GET",
-                  "headers": 
-                  {
-                    "x-rapidapi-key": "247406a57bmsh73bf0cce7ec0b4cp15cc72jsnf9d8d4aae1f1",
-                    "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
-                  }
-                }, 
-                {
-                  statusCode: 201,
-                  delay: 100,
-                  body: testData[0]
-                })
-              })
+        .then(testData => {
+          cy.intercept('https://wordsapiv1.p.rapidapi.com/words/lucky', 
+            {
+              "method": "GET",
+              "headers": 
+              {
+                "x-rapidapi-key": "247406a57bmsh73bf0cce7ec0b4cp15cc72jsnf9d8d4aae 1f1",
+                "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
+              }
+            }, 
+            {
+              statusCode: 201,
+              delay: 100,
+              body: testData[0]
+            })
+        })
       .get('.heart-icon').click()
       .get('.favorites-link').click()
       .get('.favorites-header').should('be.visible').should('contain', 'Favorites')
@@ -49,22 +49,22 @@ describe('Favorites', () => {
     .get('input[type="text"]').type('lucky')
     .get('.search-button').click()
     .fixture('test-data.json')
-          .then(testData => {
-            cy.intercept('https://wordsapiv1.p.rapidapi.com/words/lucky', 
-              {
-                "method": "GET",
-                "headers": 
-                {
-                  "x-rapidapi-key": "247406a57bmsh73bf0cce7ec0b4cp15cc72jsnf9d8d4aae1f1",
-                  "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
-                }
-              }, 
-              {
-                statusCode: 201,
-                delay: 100,
-                body: testData[0]
-              })
-            })
+      .then(testData => {
+        cy.intercept('https://wordsapiv1.p.rapidapi.com/words/lucky', 
+          {
+            "method": "GET",
+            "headers": 
+            {
+              "x-rapidapi-key": "247406a57bmsh73bf0cce7ec0b4cp15cc72jsnf9d8d4aae1f1",
+              "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
+            }
+          }, 
+          {
+            statusCode: 201,
+            delay: 100,
+            body: testData[0]
+          })
+      })
     .get('.heart-icon').click()
     .get('.favorites-link').click()
     .get('.trash-icon').click()
