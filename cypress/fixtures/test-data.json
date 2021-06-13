@@ -1,0 +1,218 @@
+
+[
+  {
+    "word": "lucky",
+    "results": [
+      {
+        "definition": "presaging or likely to bring good luck or a good outcome",
+        "partOfSpeech": "adjective",
+        "synonyms": [
+          "favorable",
+          "favourable",
+          "golden",
+          "prosperous"
+        ],
+        "similarTo": [
+          "propitious"
+        ],
+        "derivation": [
+          "luckiness"
+        ],
+        "examples": [
+          "lucky stars"
+        ]
+      },
+      {
+        "definition": "having or bringing good fortune",
+        "partOfSpeech": "adjective",
+        "also": [
+          "fortunate"
+        ],
+        "similarTo": [
+          "apotropaic",
+          "hot",
+          "serendipitous"
+        ],
+        "antonyms": [
+          "unlucky"
+        ],
+        "derivation": [
+          "luck",
+          "luckiness"
+        ],
+        "examples": [
+          "my lucky day",
+          "a lucky man"
+        ]
+      },
+      {
+        "definition": "occurring by chance",
+        "partOfSpeech": "adjective",
+        "similarTo": [
+          "fortunate"
+        ],
+        "derivation": [
+          "luck",
+          "luckiness"
+        ],
+        "examples": [
+          "a lucky escape",
+          "a lucky guess"
+        ]
+      }
+    ],
+    "syllables": {
+      "count": 2,
+      "list": [
+        "luck",
+        "y"
+      ]
+    },
+    "pronunciation": {
+      "all": "'ləki"
+    },
+    "frequency": 5.13
+  },
+  {
+    "word": "happy",
+    "results": [
+      {
+        "definition": "marked by good fortune",
+        "partOfSpeech": "adjective",
+        "synonyms": [
+          "felicitous"
+        ],
+        "similarTo": [
+          "fortunate"
+        ],
+        "derivation": [
+          "happiness"
+        ],
+        "examples": [
+          "a happy outcome"
+        ]
+      },
+      {
+        "definition": "well expressed and to the point",
+        "partOfSpeech": "adjective",
+        "synonyms": [
+          "well-chosen"
+        ],
+        "similarTo": [
+          "felicitous"
+        ],
+        "examples": [
+          "a happy turn of phrase"
+        ]
+      },
+      {
+        "definition": "eagerly disposed to act or to be of service",
+        "partOfSpeech": "adjective",
+        "synonyms": [
+          "glad"
+        ],
+        "similarTo": [
+          "willing"
+        ]
+      },
+      {
+        "definition": "enjoying or showing or marked by joy or pleasure",
+        "partOfSpeech": "adjective",
+        "also": [
+          "felicitous",
+          "cheerful",
+          "content",
+          "contented",
+          "elated",
+          "euphoric",
+          "glad",
+          "joyful",
+          "joyous"
+        ],
+        "attribute": [
+          "happiness",
+          "felicity"
+        ],
+        "similarTo": [
+          "blessed",
+          "prosperous",
+          "halcyon",
+          "riant",
+          "laughing",
+          "blissful",
+          "bright",
+          "golden"
+        ],
+        "antonyms": [
+          "unhappy"
+        ],
+        "derivation": [
+          "happiness"
+        ],
+        "examples": [
+          "a happy smile",
+          "spent many happy days on the beach",
+          "a happy marriage"
+        ]
+      }
+    ],
+    "syllables": {
+      "count": 2,
+      "list": [
+        "hap",
+        "py"
+      ]
+    },
+    "pronunciation": {
+      "all": "'hæpi"
+    },
+    "frequency": 5.58
+  },
+  {
+    "word": "grateful",
+    "results": [
+      {
+        "definition": "feeling or showing gratitude",
+        "partOfSpeech": "adjective",
+        "synonyms": [
+          "thankful"
+        ],
+        "similarTo": [
+          "appreciative",
+          "glad"
+        ],
+        "antonyms": [
+          "ungrateful"
+        ],
+        "derivation": [
+          "gratefulness"
+        ],
+        "examples": [
+          "a grateful heart",
+          "grateful for the tree's shade"
+        ]
+      },
+      {
+        "definition": "affording comfort or pleasure",
+        "partOfSpeech": "adjective",
+        "similarTo": [
+          "pleasant"
+        ],
+        "examples": [
+          "the grateful warmth of the fire"
+        ]
+      }
+    ],
+    "syllables": {
+      "count": 2,
+      "list": [
+        "grate",
+        "ful"
+      ]
+    },
+    "pronunciation": {
+      "all": "'greɪtfəl"
+    },
+    "frequency": 4.32
+  }
+]
