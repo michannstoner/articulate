@@ -55,6 +55,7 @@ class App extends Component {
 
   render() {
     
+    console.log(this.state.wordToDisplay);
     return (
       <main className='main'>
         <Nav resetPage={this.resetPage}/>
@@ -68,7 +69,7 @@ class App extends Component {
                 {!this.state.wordToDisplay && !this.state.error &&
                   <section className='welcome-display'>
                     <div className='message-container'>
-                      <img src={blobIcon} alt='pink abstract blob icon'/>
+                      <img className='welcome-blob' src={blobIcon} alt='pink abstract blob icon'/>
                       <div className='welcome-header'>welcome to ARTICULATE.</div>
                       <div className='search-to-learn'>look up a word & start learning</div>
                     </div>
@@ -88,9 +89,9 @@ class App extends Component {
                 <h3 className='no-favorites'>Nothing in favorites yet!</h3>
                 <div className='favorite-button-container'>
                 <Link to='/'>
-                  <img className='heart-icon' src={homeIcon} alt='home icon' onClick={this.resetPage}/>
+                  <img className='home-icon' src={homeIcon} alt='home icon' onClick={this.resetPage}/>
                 </Link>
-                <p className='add-to-favorites'>back to home</p>
+                <p className='back-to-home'>back to home</p>
             </div>
 
               </div>
