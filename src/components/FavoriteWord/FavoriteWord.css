@@ -19,4 +19,8 @@
   margin-right: 0.25em;
 } 
 
-
+@media only screen and (max-width: 640px) {
+  .fav-word-container {
+    margin-left: 4em;
+  } 
+}

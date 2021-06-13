@@ -53,3 +53,27 @@ body {
   margin-left: 6em;
   margin-top: 4em;
 }
+
+@media only screen and (max-width: 900px) {
+  .welcome-display {
+    position: absolute;
+    top: 63%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .welcome-display {
+  width: 100vw;
+  position: absolute;
+  top: 63%;
+  left: 0%;
+  transform: translate(-60%, -50%);
+  }
+
+  .welcome-blob {
+    height: 30em;
+    width: 24em;
+  }
+}

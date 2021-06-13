@@ -9,3 +9,10 @@
   font-size: 28px;
   margin-left: 4em;
 }
+
+@media only screen and (max-width: 640px) {
+  .no-favorites,
+  .favorites-header {
+    margin-left: 2em;
+  }
+}
