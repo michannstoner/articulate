@@ -1,0 +1,11 @@
+.favorites-section {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+}
+
+.favorites-header {
+  font-family: 'Work Sans', 'sans-serif';
+  font-size: 28px;
+  margin-left: 4em;
+}
