@@ -8,7 +8,7 @@ const NotFound = () => {
     <section className='not-found'>
       <h3>Page not found</h3>
       <Link to='/'>
-        <button>back</button>
+        <button className='back-button'>GO BACK</button>
       </Link>
     </section>
   )

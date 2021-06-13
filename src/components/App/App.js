@@ -63,7 +63,8 @@ class App extends Component {
             render={() => (
               <div>
                 <Form submitSearch={this.submitSearch}/>
-                {this.state.error && <h3>{this.state.error}</h3>}
+                {this.state.error &&
+                  <h3 className='error-message'>{this.state.error}</h3>}
                 {!this.state.wordToDisplay && !this.state.error &&
                   <section className='welcome-display'>
                     <div className='message-container'>
