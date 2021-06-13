@@ -92,7 +92,7 @@ class App extends Component {
                   <img className='home-icon' src={homeIcon} alt='home icon' onClick={this.resetPage}/>
                 </Link>
                 <p className='back-to-home'>back to home</p>
-            </div>
+              </div>
 
               </div>
               :
