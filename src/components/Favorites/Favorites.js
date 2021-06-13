@@ -21,9 +21,9 @@ const Favorites = ({ favoriteWords, removeFromFavorites, resetPage }) => {
       {favoritesList}
       <div className='favorite-button-container'>
         <Link to='/'>
-          <img className='heart-icon' src={homeIcon} alt='home icon' onClick={resetPage}/>
+          <img className='home-icon' src={homeIcon} alt='home icon' onClick={resetPage}/>
         </Link>
-        <p className='add-to-favorites'>back to home</p>
+        <p className='back-to-home'>back to home</p>
       </div>
     </section>
   )
