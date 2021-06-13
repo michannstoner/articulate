@@ -13,7 +13,13 @@ describe('Homepage', () => {
   it('should have an input to search for a word', () => {
     cy.get('form').should('be.visible')
       .get('input[placeholder="search for a word"]').should('be.visible')
-      .get('input[type="text"')
-      .type('lucky').should('have.value', 'lucky')
+      .get('img').should('be.visible')
+  })
+
+  it('should display a welcome message', () => {
+    cy.get('.welcome-display').should('be.visible')
+      .get('.welcome-blob').should('be.visible')
+      .get('.welcome-header').should('be.visible').should('contain', 'welcome to ARTICULATE.')
+      .get('.search-to-learn').should('be.visible').should('contain', 'look up a word & start learning')
   })
 })
