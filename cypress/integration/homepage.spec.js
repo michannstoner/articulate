@@ -48,12 +48,12 @@ describe('Homepage', () => {
           })
     })
         
-
     it('should navigate to the favorites page when the "favorites" link is clicked', () => {
       cy.get('nav')
         .get('.favorites-link').click()
         .url().should('eq', 'http://localhost:3000/favorites')
     })
+
 
   describe('Word Display', () => {
   
@@ -110,13 +110,6 @@ describe('Homepage', () => {
         .get('input[placeholder="search for a word"]').should('be.visible').should('have.value', '')
     })
 
-    it('should display an error message if a word is entered that is not found in the data', () => {
-      cy.get('input[type="text"]')
-        .type('fqogih')
-        .get('.search-button').click()
-        .get('.error-message').should('be.visible').should('contain', 'Oops, something went wrong! Please search for a different word, or try again later.')
-    })
-
     it('should display an add to favorites icon when the word is being displayed', () => {
       cy.get('input[type="text"]')
         .type('grateful')
@@ -141,6 +134,23 @@ describe('Homepage', () => {
 
         .get('.add-to-favorites').should('be.visible').should('contain', 'add to favorites')
         .get('.heart-icon').should('be.visible').click()
+    })
+  })
+
+  describe('Error Handling', () => {
+
+    it('should display an error message if a word is entered that is not found in the data, or if the server is down', () => {
+      cy.get('input[type="text"]')
+        .type('fqogih')
+        .get('.search-button').click()
+        .get('.error-message').should('be.visible').should('contain', 'Oops, something went wrong! Please search for a different word, or try again later.')
+    })
+
+    it('should display a page not found page if a user types in a url that does not exist', () => {
+      cy.visit('http://localhost:3000/nonexistent')
+        .get('h3').should('be.visible').should('contain', 'Page not found')
+        .get('.back-button').should('be.visible').should('contain', 'GO BACK').click()
+          .url().should('eq', 'http://localhost:3000/')
     })
   })
 })
