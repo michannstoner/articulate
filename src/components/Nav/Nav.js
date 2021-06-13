@@ -11,9 +11,8 @@ const Nav = ({ resetPage }) => {
       <h1 className='page-header' onClick={resetPage}>A.</h1>
     </Link>
     <NavLink to={'/favorites'} style={linkStyle} activeStyle={activeStyle}>
-   
       <p className='favorites-link'>favorites</p>
-     
+
     </NavLink>
     </nav>
   )
