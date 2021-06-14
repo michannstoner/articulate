@@ -21,7 +21,7 @@ A solo final project by [Michann Stoner](https://github.com/michannstoner). Orig
 ![](https://media.giphy.com/media/I7kqAuv2jlFrg0INjb/giphy.gif)
 
 ### Mobile / Responsive
-![](https://media.giphy.com/media/RvNnhr7U4K4F4raHJa/giphy.gif)
+![](https://media.giphy.com/media/2cI5cvSoPUtdCazeOp/giphy.gif)
 
 
 ### Accessibility Audit
