@@ -31,18 +31,32 @@ class App extends Component {
     .catch(error => this.setState({ error: 'Oops, something went wrong! Please search for a different word, or try again later.'}))
   }
 
-  addToFavorites = event => {
-    event.preventDefault()
+  addToFavorites = () => {
     const favorites = this.state.favorites
     const wordToAdd = this.state.wordToDisplay
 
-    if (!favorites.includes(wordToAdd)) {
-      this.setState({favorites: [...favorites, wordToAdd]})
+    if (favorites.length) {
+      const isInFavorites = favorites.find(wordObj => {
+        return wordObj.word === wordToAdd.word
+
+      })
+      return isInFavorites === undefined ? this.setState({ favorites: [...favorites, wordToAdd]}) : this.setState({ favorites: [...favorites] })
+    } else {
+      this.setState({ favorites: [wordToAdd] })
     }
   }
 
+  
+  //     if (wordObj.word === wordToAdd.word) {
+  //       this.setState({ favorites: [...favorites, wordToAdd] })
+  //     }
+  //   })
+  // } else {
+  //   this.setState({ favorites: wordToAdd })
+
   removeFromFavorites = (event) => {
     const updatedFavorites = this.state.favorites.filter(word => {
+    
       return word.frequency !== parseFloat(event.target.id) 
     })
 
@@ -78,7 +92,7 @@ class App extends Component {
                   </section></div>}
                 {this.state.wordToDisplay && 
                   <div>
-                  <button className='search-another' onClick={this.resetPage}>SEARCH ANOTHER WORD</button>
+                  <button className='search-another' onClick={this.resetPage}>SEARCH FOR ANOTHER WORD</button>
                   <WordInfo 
                     wordToDisplay={this.state.wordToDisplay}
                     addToFavorites={this.addToFavorites}
@@ -104,6 +118,7 @@ class App extends Component {
                 favoriteWords={this.state.favorites} 
                 removeFromFavorites={this.removeFromFavorites}
                 resetPage={this.resetPage}
+                addToFavorites={this.addToFavorites}
               />
             )}
           />
