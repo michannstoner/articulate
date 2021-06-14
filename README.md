@@ -1,5 +1,5 @@
 ## ARTICULATE.
-A solo final project by [Michann Stoner](https://github.com/michannstoner). Original project spec can be found [here](https://frontend.turing.edu/projects/module-3/niche-audience.html).
+A solo final project by [Michann Stoner](https://github.com/michannstoner). Original project spec can be found [here](https://frontend.turing.edu/projects/module-3/niche-audience.html). Deployed application [here!](https://articulate-word-finder.herokuapp.com/)
 
 ### Table of Contents
 * [Description](#description)
@@ -34,7 +34,7 @@ Maybe you aren't feeling confident in your lexicon, maybe you're trying to tight
 
 OR
 
-* View deployed application [here]
+* View deployed application [here](https://articulate-word-finder.herokuapp.com/)
 
 ### Running Tests
 * Once in project directory, run `npx cypress open` 
