@@ -62,6 +62,16 @@ describe('Homepage', () => {
         cy.get('input[placeholder="search for a word"]').should('be.visible').should('have.value', '')
     })
 
+    it('should display a "search for another word" button', () => {
+      cy.get('.search-another').should('be.visible').should('contain', 'SEARCH FOR ANOTHER WORD')
+    })
+
+    it('should navigate back to the welcome page when the "search for another word" button is clicked', () => {
+      cy.get('.search-another').click()
+        .get('.welcome-display').should('be.visible')
+        .get('form').should('be.visible')
+    })
+
     it('should display an add to favorites icon when the word is being displayed', () => {
         cy.get('.add-to-favorites').should('be.visible').should('contain', 'add to favorites')
         .get('.heart-icon').should('be.visible').click()
