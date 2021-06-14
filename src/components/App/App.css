@@ -88,3 +88,16 @@ body {
     width: 24em;
   }
 }
+
+@media only screen and (min-width: 1680px) {
+  .search-another {
+    margin-left: 11em;
+  }
+
+  .welcome-display {
+  position: absolute;
+  top: 63%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  }
+}

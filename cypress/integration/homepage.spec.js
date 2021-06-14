@@ -1,7 +1,18 @@
+const baseURL = 'http://localhost:3000/'
+const fetchCall = 'https://wordsapiv1.p.rapidapi.com/words/happy'
+const fetchDetails = {
+  "method": "GET",
+  "headers": 
+  {
+    "x-rapidapi-key": "247406a57bmsh73bf0cce7ec0b4cp15cc72jsnf9d8d4aae1f1",
+    "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
+  }
+}
+
 describe('Homepage', () => {
   
   beforeEach(() => {
-    cy.visit('http://localhost:3000/')
+    cy.visit(baseURL)
   })
 
     it('should have a nav', () => {
@@ -38,15 +49,7 @@ describe('Homepage', () => {
       cy.get('input[type="text"]')
         .type('lucky')
         .get('.go-button').click()
-        .intercept('https://wordsapiv1.p.rapidapi.com/words/happy', 
-        {
-          "method": "GET",
-          "headers": 
-          {
-            "x-rapidapi-key": "247406a57bmsh73bf0cce7ec0b4cp15cc72jsnf9d8d4aae1f1",
-            "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
-          }
-        }, { fixture: 'test-data.json' })
+        .intercept(fetchCall, fetchDetails, { fixture: 'test-data.json' })
     })
   
     it('should display the search results, if the word was found', () => {
@@ -91,7 +94,7 @@ describe('Homepage', () => {
       cy.visit('http://localhost:3000/nonexistent')
         .get('h3').should('be.visible').should('contain', 'Page not found')
         .get('.back-button').should('be.visible').should('contain', 'GO BACK').click()
-          .url().should('eq', 'http://localhost:3000/')
+          .url().should('eq', baseURL)
     })
   })
 })

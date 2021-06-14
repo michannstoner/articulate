@@ -1,6 +1,8 @@
+const baseURL = 'http://localhost:3000/'
+
 describe('Favorites', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/')
+    cy.visit(baseURL)
       .get('.favorites-link').click()
   })
 
@@ -13,7 +15,7 @@ describe('Favorites', () => {
     cy.get('.back-to-home').should('be.visible').should('contain', 'back to home')
     .get('.home-icon').should('be.visible')
       .click()
-      .url().should('eq', 'http://localhost:3000/')
+      .url().should('eq', baseURL)
   })
 
 describe('Adding Favorites', () => {
