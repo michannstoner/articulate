@@ -4,11 +4,10 @@ A solo final project by [Michann Stoner](https://github.com/michannstoner). Orig
 ### Table of Contents
 * [Description](#description)
 * [Setup](#setup)
-* [Running Tests](#running)
+* [Running Tests](#running tests)
 * [Technologies](#technologies)
 * [Planning](#planning)
 * [Reflections](#reflections)
-* [Future Project Plans](#future)
 
 
 ### Description
