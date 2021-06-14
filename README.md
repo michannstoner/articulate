@@ -62,7 +62,8 @@ OR
 </p>
 
 ### Planning 
-* [Wireframe](https://github.co[articulate-wireframe.pdf](https://github.com/michannstoner/articulate/files/6627027/NA-wireframe.pdf) created using Figma
+* [Wireframe](https://github.com/michannstoner/articulate/files/6649534/articulate-wireframe.pdf)
+
 * Project planning via [GitHub Projects](https://github.com/michannstoner/articulate/projects/1)
 
 
