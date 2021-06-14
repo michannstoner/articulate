@@ -10,7 +10,7 @@ import Nav from '../Nav/Nav'
 import NotFound from '../NotFound/NotFound'
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
-import WordInfo from '../WordInfo/WordInfo'
+import WordDisplay from '../WordDisplay/WordDisplay'
 
 class App extends Component {
   constructor() {
@@ -86,7 +86,7 @@ class App extends Component {
                 {this.state.wordToDisplay && 
                   <div>
                   <button className='search-another' onClick={this.resetPage}>SEARCH FOR ANOTHER WORD</button>
-                  <WordInfo 
+                  <WordDisplay 
                     wordToDisplay={this.state.wordToDisplay}
                     addToFavorites={this.addToFavorites}
                   /></div>}
