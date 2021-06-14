@@ -35,7 +35,7 @@ class Form extends Component {
           value={this.state.searchBarValue}
           onChange={event => this.handleChange(event)}
         />
-        <img src={searchIcon} className='search-button' alt='search-icon' onClick={event => this.inputSearch(event)}/>
+        <button className='go-button' disabled={!this.state.searchBarValue} onClick={event => this.inputSearch(event)}>GO</button>
       </form>
     )
   }
