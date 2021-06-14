@@ -1,3 +1,5 @@
+[articulate-wireframe.pdf](https://github.com/michannstoner/articulate/files/6649496/articulate-wireframe.pdf)
+[articulate-wireframe.pdf](https://github.com/michannstoner/articulate/files/6649523/articulate-wireframe.pdf)
 ## ARTICULATE.
 A solo final project by [Michann Stoner](https://github.com/michannstoner). Original project spec can be found [here](https://frontend.turing.edu/projects/module-3/niche-audience.html).
 
@@ -60,7 +62,7 @@ OR
 </p>
 
 ### Planning 
-* [Wireframe](https://github.com/michannstoner/articulate/files/6627027/NA-wireframe.pdf) created using Figma
+* [Wireframe](https://github.co[articulate-wireframe.pdf](https://github.com/michannstoner/articulate/files/6627027/NA-wireframe.pdf) created using Figma
 * Project planning via [GitHub Projects](https://github.com/michannstoner/articulate/projects/1)
 
 
