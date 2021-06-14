@@ -57,6 +57,7 @@ body {
 .search-another {
   margin-top: 2em;
   height: 3em;
+  cursor: pointer;
 }
 
 .error-back-button,
@@ -79,7 +80,7 @@ body {
   position: absolute;
   top: 63%;
   left: 0%;
-  transform: translate(-60%, -50%);
+  transform: translate(-58%, -50%);
   }
 
   .welcome-blob {
