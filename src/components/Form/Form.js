@@ -1,7 +1,6 @@
 import './Form.css'
 import { Component } from 'react'
 import PropTypes from 'prop-types'
-import searchIcon from '../../assets/search-icon.png'
 
 class Form extends Component {
   constructor() {
