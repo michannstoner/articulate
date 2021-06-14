@@ -4,13 +4,13 @@ import Favorites from '../Favorites/Favorites'
 import { fetchWord } from '../../utils/api-calls'
 import { filterWordData } from '../../utils/cleaning-functions'
 import Form from '../Form/Form'
+import homeIcon from '../../assets/home-icon.png'
+import { Link } from 'react-router-dom'
 import Nav from '../Nav/Nav'
 import NotFound from '../NotFound/NotFound'
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import WordInfo from '../WordInfo/WordInfo'
-import homeIcon from '../../assets/home-icon.png'
-import { Link } from 'react-router-dom'
 
 class App extends Component {
   constructor() {
@@ -50,12 +50,10 @@ class App extends Component {
   }
 
   resetPage = () => {
-    this.setState({ wordToDisplay: '' })
+    this.setState({ wordToDisplay: '', error: '' })
   }
 
   render() {
-    
-    console.log(this.state.wordToDisplay);
     return (
       <main className='main'>
         <Nav resetPage={this.resetPage}/>
@@ -63,22 +61,28 @@ class App extends Component {
           <Route exact path ='/'
             render={() => (
               <div>
-                <Form submitSearch={this.submitSearch}/>
-                {this.state.error &&
-                  <h3 className='error-message'>{this.state.error}</h3>}
+                {this.state.error && 
+                  <div>
+                    <h3 className='error-message'>{this.state.error}</h3>
+                    <button className='error-back-button' onClick={this.resetPage}>GO BACK</button>
+                  </div>}
                 {!this.state.wordToDisplay && !this.state.error &&
+                <div>
+                  <Form submitSearch={this.submitSearch}/>
                   <section className='welcome-display'>
                     <div className='message-container'>
                       <img className='welcome-blob' src={blobIcon} alt='pink abstract blob icon'/>
                       <div className='welcome-header'>welcome to ARTICULATE.</div>
                       <div className='search-to-learn'>look up a word & start learning</div>
                     </div>
-                  </section>}
-                {this.state.wordToDisplay &&
+                  </section></div>}
+                {this.state.wordToDisplay && 
+                  <div>
+                  <button className='search-another' onClick={this.resetPage}>SEARCH ANOTHER WORD</button>
                   <WordInfo 
                     wordToDisplay={this.state.wordToDisplay}
                     addToFavorites={this.addToFavorites}
-                  />}
+                  /></div>}
               </div>
             )}
           />
@@ -101,7 +105,6 @@ class App extends Component {
                 removeFromFavorites={this.removeFromFavorites}
                 resetPage={this.resetPage}
               />
-              
             )}
           />
           <Route 
