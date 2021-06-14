@@ -54,6 +54,16 @@ body {
   margin-top: 4em;
 }
 
+.search-another {
+  margin-top: 2em;
+  height: 3em;
+}
+
+.error-back-button,
+.search-another {
+  margin-left: 8em;
+}
+
 @media only screen and (max-width: 900px) {
   .welcome-display {
     position: absolute;
