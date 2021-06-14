@@ -46,14 +46,6 @@ class App extends Component {
     }
   }
 
-  
-  //     if (wordObj.word === wordToAdd.word) {
-  //       this.setState({ favorites: [...favorites, wordToAdd] })
-  //     }
-  //   })
-  // } else {
-  //   this.setState({ favorites: wordToAdd })
-
   removeFromFavorites = (event) => {
     const updatedFavorites = this.state.favorites.filter(word => {
     
