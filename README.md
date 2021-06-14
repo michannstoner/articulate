@@ -1,5 +1,5 @@
 ## ARTICULATE.
-A solo final project by [Michann Stoner](https://github.com/michannstoner). Original project spec can be found [here](https://frontend.turing.edu/projects/module-3/niche-audience.html). Deployed application [here!](https://articulate-word-finder.herokuapp.com/)
+A solo final project by [Michann Stoner](https://github.com/michannstoner). Original project spec can be found [here](https://frontend.turing.edu/projects/module-3/niche-audience.html).
 
 ### Table of Contents
 * [Description](#description)
@@ -11,6 +11,7 @@ A solo final project by [Michann Stoner](https://github.com/michannstoner). Orig
 
 ### Description
 Maybe you aren't feeling confident in your lexicon, maybe you're trying to tighten up that resume to sound ✨extra✨ professional, or maybe you just love words! ARTICULATE. is a word search application, where users can search for a word to see its definition, pronunciation, synonyms, or see it used in an example. Users can also add a word to their favorites, and view the favorites section to be able to come back to a word. 
+* [See it in action](https://articulate-word-finder.herokuapp.com/)
 
 
 ### Main Page
