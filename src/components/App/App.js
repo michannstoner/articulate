@@ -96,16 +96,15 @@ class App extends Component {
           <Route exact path='/favorites'
             render={() => (
               !this.state.favorites.length ?
-              <div>
+              <section className='nothing-in-favorites-section'>
                 <h3 className='no-favorites'>Nothing in favorites yet!</h3>
                 <div className='favorite-button-container'>
-                <Link to='/'>
-                  <img className='home-icon' src={homeIcon} alt='home icon' onClick={this.resetPage}/>
-                </Link>
-                <p className='back-to-home'>back to home</p>
-              </div>
-
-              </div>
+                  <Link to='/'>
+                    <img className='home-icon' src={homeIcon} alt='home icon' onClick={this.resetPage}/>
+                  </Link>
+                  <p className='back-to-home'>back to home</p>
+                </div>
+              </section>
               :
               <Favorites 
                 favoriteWords={this.state.favorites} 
