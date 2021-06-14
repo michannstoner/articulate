@@ -36,22 +36,23 @@ class App extends Component {
     const wordToAdd = this.state.wordToDisplay
 
     if (favorites.length) {
-      const isInFavorites = favorites.find(wordObj => {
-        return wordObj.word === wordToAdd.word
-
-      })
-      return isInFavorites === undefined ? this.setState({ favorites: [...favorites, wordToAdd]}) : this.setState({ favorites: [...favorites] })
+      const isFavorited = this.checkForFavorites(wordToAdd)
+      return isFavorited === undefined ? this.setState({ favorites: [...favorites, wordToAdd]}) : this.setState({ favorites: [...favorites] })
     } else {
       this.setState({ favorites: [wordToAdd] })
     }
   }
 
+  checkForFavorites = (wordToAdd) => {
+    return this.state.favorites.find(wordObj => {
+      return wordObj.word === wordToAdd.word
+    })
+  }
+
   removeFromFavorites = (event) => {
     const updatedFavorites = this.state.favorites.filter(word => {
-    
       return word.frequency !== parseFloat(event.target.id) 
     })
-
     this.setState({ favorites: updatedFavorites })
   }
 
