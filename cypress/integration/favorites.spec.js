@@ -29,20 +29,21 @@ describe('Adding Favorites', () => {
           "x-rapidapi-key": "247406a57bmsh73bf0cce7ec0b4cp15cc72jsnf9d8d4aae 1f1",
           "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
         }
-      }, { fixture: 'test-data.json' })
+      }, 
+      { fixture: 'test-data.json' })
       .get('.heart-icon').click()
       .get('.favorites-link').click()
   })
-  it('should display a favorite word if a word has been added', () => {
-      cy.get('.favorites-header').should('be.visible').should('contain', 'Favorites')
-      .get('.list-word').should('be.visible').should('contain', 'lucky')
-      .get('.trash-icon').should('be.visible')
-  })
-  
-  it('should remove a word if the trash can icon is clicked', () => {
-    cy.get('.trash-icon').click()
-    .get('.no-favorites').should('be.visible').should('contain', 'Nothing in favorites yet!')
-  })
-})
 
+    it('should display a favorite word if a word has been added', () => {
+        cy.get('.favorites-header').should('be.visible').should('contain', 'Favorites')
+        .get('.list-word').should('be.visible').should('contain', 'lucky')
+        .get('.trash-icon').should('be.visible')
+    })
+  
+    it('should remove a word if the trash can icon is clicked', () => {
+      cy.get('.trash-icon').click()
+      .get('.no-favorites').should('be.visible').should('contain', 'Nothing in favorites yet!')
+    })
+  })
 })
