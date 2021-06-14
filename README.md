@@ -1,5 +1,3 @@
-[articulate-wireframe.pdf](https://github.com/michannstoner/articulate/files/6649496/articulate-wireframe.pdf)
-[articulate-wireframe.pdf](https://github.com/michannstoner/articulate/files/6649523/articulate-wireframe.pdf)
 ## ARTICULATE.
 A solo final project by [Michann Stoner](https://github.com/michannstoner). Original project spec can be found [here](https://frontend.turing.edu/projects/module-3/niche-audience.html).
 
@@ -10,6 +8,7 @@ A solo final project by [Michann Stoner](https://github.com/michannstoner). Orig
 * [Technologies](#technologies)
 * [Planning](#planning)
 * [Reflections](#reflections)
+* [Future Project Plans](#futureprojectplans)
 
 
 ### Description
@@ -70,10 +69,17 @@ OR
 ### Reflections
 
 #### Project Evolution
-
+I was so excited to get started on this project. Initially, I struggled coming up with a "niche" enough topic, where I could get pretty specific about my users. But once I found the words API, I knew I was going to have fun with it! I built out my wireframe after finding some inspiration, and completed my project board on day one. I worked through the basics of the component structure fairly quickly, but hit a few snags with how information was coming in from the API with certain words. I spent some time analyzing the data, forming some plans, and then continued to work. I used my project board to guage how long my remaining tasks would take, and ended up completing styling and functionality before moving on to Cypress testing. All in all, I feel like I stayed on track and wrapped the project up right in the amount of time I had expected. 
 
 #### Wins 
-
+I'd say some wins for this project would be how quickly the data came through to be displayed on the DOM. It's been fun to observe my own progress with building React applications from scratch. Five weeks ago it was a little fuzzy and pretty slow-moving. I also really enjoyed styling this project a lot. 
 
 #### Challenges
- 
+A challenge I encountered on this project was dealing with the data from a public API. I had to fetch my data for each search query, rather than being able to fetch all of it in `componentDidMount` and storing it in state, then iterating through it to find a word match. Because of that, error handling and navigation was a little different than what I've done in previous projects. Also, I found the data to be somewhat inconsistent - where some words have synonyms/examples/pronunciation, etc. and others did not, so I had to get creative with how to take care of those inconsistencies. 
+
+### Future Project Plans 
+* Have more information in the favorites section - be able to click a word and view the details again 
+* An option to randomize words! 
+* Setting up local storage so that favorited words persist on page reload 
+* An audio clip of the word pronunciation 
+* More definition options 
