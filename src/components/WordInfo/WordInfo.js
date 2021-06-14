@@ -6,9 +6,7 @@ import heartIcon from '../../assets/heart-icon.png'
 
 const WordInfo = ({ wordToDisplay, addToFavorites }) => {
   const unavailableMessage = 'unavailable for this word, sorry!'
-
   const formattedSynonyms = !wordToDisplay.synonyms ? unavailableMessage : wordToDisplay.synonyms.join(', ')
-
   const formattedExamples = !wordToDisplay.example ? unavailableMessage : wordToDisplay.example.join(', ')
   
   const word = 
