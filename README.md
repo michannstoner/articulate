@@ -15,6 +15,7 @@ A solo final project by [Michann Stoner](https://github.com/michannstoner). Orig
 
 
 ### Main Page
+![](https://media.giphy.com/media/dhrOjLyEpHT0X0HYqn/giphy.gif)
 
 ### Favorites 
 
