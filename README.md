@@ -17,9 +17,11 @@ A solo final project by [Michann Stoner](https://github.com/michannstoner). Orig
 ### Main Page
 ![](https://media.giphy.com/media/dhrOjLyEpHT0X0HYqn/giphy.gif)
 
-### Favorites 
+### Favorites
+![](https://media.giphy.com/media/I7kqAuv2jlFrg0INjb/giphy.gif)
 
 ### Mobile / Responsive
+![](https://media.giphy.com/media/RvNnhr7U4K4F4raHJa/giphy.gif)
 
 
 ### Accessibility Audit
