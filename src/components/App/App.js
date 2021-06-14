@@ -74,7 +74,7 @@ class App extends Component {
                     <button className='error-back-button' onClick={this.resetPage}>GO BACK</button>
                   </div>}
                 {!this.state.wordToDisplay && !this.state.error &&
-                <div>
+                <div className='welcome-container'>
                   <Form submitSearch={this.submitSearch}/>
                   <section className='welcome-display'>
                     <div className='message-container'>
@@ -82,14 +82,16 @@ class App extends Component {
                       <div className='welcome-header'>welcome to ARTICULATE.</div>
                       <div className='search-to-learn'>look up a word & start learning</div>
                     </div>
-                  </section></div>}
+                  </section>
+                </div>}
                 {this.state.wordToDisplay && 
-                  <div>
-                  <button className='search-another' onClick={this.resetPage}>SEARCH FOR ANOTHER WORD</button>
-                  <WordDisplay 
-                    wordToDisplay={this.state.wordToDisplay}
-                    addToFavorites={this.addToFavorites}
-                  /></div>}
+                  <div className='word-display-container'>
+                    <button className='search-another' onClick={this.resetPage}>SEARCH FOR ANOTHER WORD</button>
+                    <WordDisplay 
+                      wordToDisplay={this.state.wordToDisplay}
+                      addToFavorites={this.addToFavorites}
+                    />
+                  </div>}
               </div>
             )}
           />
