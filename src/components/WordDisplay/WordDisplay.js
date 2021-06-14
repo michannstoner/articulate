@@ -1,8 +1,8 @@
-import './WordDisplay.css'
-import Word from '../Word/Word'
-import PropTypes from 'prop-types'
 import blueBlobIcon from '../../assets/blue-blob-icon.png'
 import heartIcon from '../../assets/heart-icon.png'
+import PropTypes from 'prop-types'
+import './WordDisplay.css'
+import Word from '../Word/Word'
 
 const WordDisplay = ({ wordToDisplay, addToFavorites }) => {
   const unavailableMessage = 'unavailable for this word, sorry!'
