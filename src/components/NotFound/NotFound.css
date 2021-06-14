@@ -1,5 +1,8 @@
-.back-button {
+.back-button,
+.search-another,
+.error-back-button,
+.go-button {
   background-color: transparent;
   font-family: 'Roboto Mono', 'monospace';
-  border: solid black 2px;
+  border: solid black 1px;
 }

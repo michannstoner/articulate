@@ -4,11 +4,10 @@ import homeIcon from '../../assets/home-icon.png'
 import { Link } from 'react-router-dom'
 import propTypes from 'prop-types'
 
-
 const Favorites = ({ favoriteWords, removeFromFavorites, resetPage }) => {
-  const favoritesList = favoriteWords.map(word => {
-    return <FavoriteWord 
-              key={word.frequency}
+  const favoritesList = favoriteWords.map((word, i) => {
+    return <FavoriteWord
+              key={i}
               word={word.word}
               id={word.frequency}
               removeFromFavorites={removeFromFavorites}
@@ -32,6 +31,7 @@ const Favorites = ({ favoriteWords, removeFromFavorites, resetPage }) => {
 Favorites.propTypes = {
   favoriteWords: propTypes.array,
   removeFromFavorites: propTypes.func,
+  resetPage: propTypes.func
 }
 
 export default Favorites

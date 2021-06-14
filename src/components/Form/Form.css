@@ -10,20 +10,23 @@ input {
   font-family: 'Roboto Mono', 'monospace';
   background-color: white;
   border: none;
-  height: 2.5em;
   width: 25em;
   color: black;
   padding-left: 1em;
 }
 
-.search-button {
-  width: 1.75em;
-  height: 1.75em;
+.go-button {
+  width: 4em;
   margin-left: 0.5em;
+}
+
+input, 
+.go-button {
+  height: 2.5em;
 }
 
 @media only screen and (max-width: 780px) {
   input {
-    width: 18em;
+    width: 15em;
   }
 }

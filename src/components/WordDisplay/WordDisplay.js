@@ -1,14 +1,12 @@
-import './WordInfo.css'
-import Word from '../Word/Word'
-import PropTypes from 'prop-types'
 import blueBlobIcon from '../../assets/blue-blob-icon.png'
 import heartIcon from '../../assets/heart-icon.png'
+import PropTypes from 'prop-types'
+import './WordDisplay.css'
+import Word from '../Word/Word'
 
-const WordInfo = ({ wordToDisplay, addToFavorites }) => {
+const WordDisplay = ({ wordToDisplay, addToFavorites }) => {
   const unavailableMessage = 'unavailable for this word, sorry!'
-
   const formattedSynonyms = !wordToDisplay.synonyms ? unavailableMessage : wordToDisplay.synonyms.join(', ')
-
   const formattedExamples = !wordToDisplay.example ? unavailableMessage : wordToDisplay.example.join(', ')
   
   const word = 
@@ -34,9 +32,9 @@ const WordInfo = ({ wordToDisplay, addToFavorites }) => {
   )
 }
 
-WordInfo.propTypes = {
+WordDisplay.propTypes = {
   wordToDisplay: PropTypes.object,
   addToFavorites: PropTypes.func
 }
 
-export default WordInfo
+export default WordDisplay

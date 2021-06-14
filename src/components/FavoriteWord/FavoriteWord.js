@@ -6,7 +6,7 @@ const FavoriteWord = ({ word, id, removeFromFavorites }) => {
   return (
     <div className='fav-word-container'>
         <p className='list-word'>{word}</p>
-        <img id={id} onClick={removeFromFavorites} className='trash-icon' src={trashCanIcon} alt='trash icon to remove from favorites'/>
+        <img id={id} onClick={removeFromFavorites} className='trash-icon' src={trashCanIcon} alt='trash can icon to remove from favorites'/>
     </div>
   )
 }

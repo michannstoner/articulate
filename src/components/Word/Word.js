@@ -20,7 +20,9 @@ const Word = ({ word, pronunciation, definition, synonyms, example }) => {
 Word.propTypes = {
   word: PropTypes.string,
   pronunciation: PropTypes.string,
-  definition: PropTypes.string
+  definition: PropTypes.string,
+  synonyms: PropTypes.string,
+  example: PropTypes.string
 }
 
 export default Word

@@ -1,7 +1,6 @@
 import './Form.css'
 import { Component } from 'react'
 import PropTypes from 'prop-types'
-import searchIcon from '../../assets/search-icon.png'
 
 class Form extends Component {
   constructor() {
@@ -35,7 +34,7 @@ class Form extends Component {
           value={this.state.searchBarValue}
           onChange={event => this.handleChange(event)}
         />
-        <img src={searchIcon} className='search-button' alt='search-icon' onClick={event => this.inputSearch(event)}/>
+        <button className='go-button' disabled={!this.state.searchBarValue} onClick={event => this.inputSearch(event)}>GO</button>
       </form>
     )
   }
