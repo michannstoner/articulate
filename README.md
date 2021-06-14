@@ -13,7 +13,7 @@ A solo final project by [Michann Stoner](https://github.com/michannstoner). Orig
 
 
 ### Description
-
+Maybe you aren't feeling confident in your lexicon, maybe you're trying to tighten up that resume to sound ✨extra✨ professional, or maybe you just love words! ARTICULATE. is a word search application, where users can search for a word to see its definition, pronunciation, synonyms, or see it used in an example. Users can also add a word to their favorites, and view the favorites section to be able to come back to a word. 
 
 
 ### Main Page
@@ -25,9 +25,8 @@ A solo final project by [Michann Stoner](https://github.com/michannstoner). Orig
 ### Mobile / Responsive
 ![](https://media.giphy.com/media/2cI5cvSoPUtdCazeOp/giphy.gif)
 
-
 ### Accessibility Audit
-
+<img width="371" alt="Screen Shot 2021-06-14 at 9 38 15 AM" src="https://user-images.githubusercontent.com/76269802/121919504-4e23fd00-ccf4-11eb-8087-20ae992eb7b3.png">
 
 ### Setup
 * From your terminal, `git clone` this repository  
@@ -62,7 +61,7 @@ OR
 </p>
 
 ### Planning 
-* [Wireframe](https://github.com/michannstoner/articulate/files/6649534/articulate-wireframe.pdf)
+* [Wireframe](https://github.com/michannstoner/articulate/files/6649534/articulate-wireframe.pdf) made using Figma
 
 * Project planning via [GitHub Projects](https://github.com/michannstoner/articulate/projects/1)
 
