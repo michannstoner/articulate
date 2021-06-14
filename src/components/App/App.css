@@ -89,6 +89,22 @@ body {
   }
 }
 
+@media only screen and (max-width: 375px) {
+  .welcome-display {
+    width: 80vw;
+    position: absolute;
+    top: 63%;
+    left: 0%;
+    transform: translate(-90%, -50%);
+  }
+
+  form {
+    float: left;
+
+  }
+  
+}
+
 @media only screen and (min-width: 1680px) {
   .search-another {
     margin-left: 11em;
